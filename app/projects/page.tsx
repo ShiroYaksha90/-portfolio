@@ -17,16 +17,34 @@ const projects: ProjectItemProps[] = [
     repo: "https://github.com/ShiroYaksha90/hola",
   },
   {
+    name: "My World",
+    url: "https://my-world-sems.onrender.com/",
+    image: "/images/World App.svg",
+    repo: "https://github.com/ShiroYaksha90/react-redux-capstone",
+  },
+  {
     name: "Bookstore",
     url: "https://book-store-jigy.onrender.com/",
     image: "/images/bookstore.svg",
     repo: "https://github.com/ShiroYaksha90/bookstore-react",
   },
   {
+    name: "Math Magician",
+    url: "https://basim-math-magician.onrender.com/Calculator",
+    image: "/images/Math Magician.svg",
+    repo: "https://github.com/ShiroYaksha90/math-magician",
+  },
+  {
     name: "Space Hub Traveler",
     url: "https://space-hub-osb.netlify.app/",
-    image: "/images/todo.svg",
+    image: "/images/Space Travelers Hub Screenshot.svg",
     repo: "https://github.com/ShiroYaksha90/space-hub-traveler",
+  },
+  {
+    name: "Go Movie",
+    url: "https://dheerajsachdeva.github.io/capstone2/dist/",
+    image: "/images/Go Movie.svg",
+    repo: "https://github.com/ShiroYaksha90/Foodo",
   },
 ];
 
@@ -46,12 +64,12 @@ function ProjectItem(props: ProjectItemProps) {
             />
           </div>
         </Link>
-        <div className="px-6 py-4">
+        <div className="px-6 py-4 bg-amber-100">
           <div className="font-bold text-xl mb-2">{name}</div>
         </div>
-        <div className="flex px-6 py-4">
+        <div className="flex px-6 py-4 bg-amber-100">
           <a
-            className="flex items-center gap-1 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+            className="flex items-center gap-1 inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
             href={url}
             target="_blank"
           >
@@ -73,7 +91,7 @@ function ProjectItem(props: ProjectItemProps) {
             Live link
           </a>
           <a
-            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+            className="inline-block bg-yellow-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
             href={repo}
             target="_blank"
           >
@@ -95,14 +113,11 @@ export default function Projects() {
       </header>
       <div className="mt-16">
         <h2 className="text-2xl">Apps</h2>
-        <ul className="grid grid-cols-3 auto-rows-fr gap-x-12 gap-y-16 mt-8">
+        <ul className="grid grid-cols-1 auto-rows-fr md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-8">
           {projects.map((project) => (
             <ProjectItem key={project.url} {...project} />
           ))}
         </ul>
-      </div>
-      <div className="mt-16">
-        <h2 className="text-2xl">Books</h2>
       </div>
     </div>
   );

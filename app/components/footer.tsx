@@ -16,7 +16,7 @@ function FooterLink(props: FooterLinkProps) {
 export default function Footer() {
   return (
     <>
-      <footer className="pt-10 px-8 pb-16 border-t">
+      <footer className="pt-4 px-8 pb-16 border-t-2 mt-6">
         <div
           className="flex justify-between gap-6"
           role="navigation"
